@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#nav_list{
+    display: flex;
+    list-style: none;
+}
+
+#nav_list li div{
+    min-width: 10px;
+    min-height: 10px;
+    /* border: 1px solid black; */
+    margin-right: 1em;
+}
+
+nav{
+    font-size: 24px;
+    border-bottom: 1px solid black;
+    width: 80%;
+    margin: 3vh auto 0 auto;
+    padding: 0 2% 1vh 2%;
+}
+
+#main_container{
+    margin-top: 20px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-evenly;;
+}
+
+#effects_menu{
+    border: 1px solid black;
+    min-height: 50px;
+    width: 15%;
+}
+
+#work_part{
+    display: flex;
+    border: 1px solid black;
+    min-height: 50px;
+    width: 80%;
+    min-height: 80vh;
+}
+
+#effects_logo{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+#effects_list{
+    list-style: none;
+}
+
+#effects_list li{
+    text-align: center
+}
+
+#file_field{
+    display: none;
+    visibility:hidden;
+}
+
+#form_photo_input{
+    margin: auto;
+}
+
+#label_photo_input label{
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#arrow_span{
+    font-size: 16px;
+}
+
+#white_black_machine_effect{
+    cursor: pointer;
+}
+
+a:link, a:visited, a:hover, a:active{
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#about_text_container{
+    width: 85%;
+    text-align: justify;
+    font-size: 20px;
+}
+
+#about_us_label{
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+#other_products_container{
+    width: 85%;
+    font-size: 20px;
+}
+
+#other_products_label{
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+label{
+    margin-bottom: 0px;
+}
+
+#photo_preview_container{
+    width: 100%;
+    display: grid;
+}
+
+#form_photo_input img{
+    display: block;
+    height: 60vh;
+    margin: auto auto 15px auto;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+#result_img{
+    display: block;
+    height: 60vh;
+    margin: auto auto 0px auto;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+#submit_field{
+    display: block;
+    margin: auto;
+    padding: 5px 20px 5px 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+#result_container{
+    display: grid;
+    width: 100%;
+}

@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title %}
+Main page
+{% endblock %}
+{% block body %}
+<nav>
+    <ol id="nav_list">
+        <li>
+            <div><u><a href="/main_page">Main page</u></a></div>
+        </li>
+        <li>
+            <div><a href="/about_us_page">About us</a></div>
+        </li>
+        <li>
+            <div><a href="/other_products_page">Other products</a></div>
+        </li>
+    </ol>
+</nav>
+<div id="main_container">
+    <div id="effects_menu">
+        <h2 id="effects_logo">Effects</h2>
+        <ol id="effects_list">
+            <li id="white_black_machine_effect"><u><a href="/main_page">White-Black machine</u></a></li>
+        </ol>
+    </div>
+    <div id="work_part">
+        {% if img %}
+            <div id="result_container">
+                <img id="result_img" src="{{ url_for('static', filename='photos/'+img) }}">
+                <input id='submit_field' type="button" value="New photo" onclick="window.location.assign('/')">
+            </div>
+        {% else %}
+            <div id="photo_preview_container">
+                <form id="form_photo_input" method="post" enctype="multipart/form-data" action="/">
+                    <div id="start_form">
+                        <div id="label_photo_input">{{form.file.label}}</div>
+                        {{form.file}}
+                        <!-- <label id="label_photo_input" for="photo_input">Upload photo <span id="arrow_span">↓</span></label>
+                        <input id="photo_input" class="form-control-file" type="file"> -->
+                    </div>
+                    <div id="result_photo"></div>
+                </form>
+            </div>
+        {% endif %}
+    </div>
+</div>
+<script>
+    function onload_function(){
+        $('#file_field').on("input", function(){
+            preview_photo()
+        })
+    }
+
+    function preview_photo(){
+        var input_id = 'file_field'
+        var preview_id = 'result_photo'
+        const files = document.getElementById('file_field').files
+        $('#start_form').css('display', 'none')
+        var last_file = files[files.length - 1]
+        const fileReader = new FileReader()
+        fileReader.readAsDataURL(last_file)
+        fileReader.addEventListener("load", function(){
+            document.getElementById(preview_id).innerHTML = `<img src="${this.result}" />{{form.submit}}`
+        })
+    }
+    window.onload = onload_function()
+</script>
+{% endblock %}

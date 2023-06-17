@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}
+Other products
+{% endblock %}
+{% block body %}
+<nav>
+    <ol id="nav_list">
+        <li>
+            <div><a href="/main_page" class="a">Main page</a></div>
+        </li>
+        <li>
+            <div><a href="/about_us_page">About us</a></div>
+        </li>
+        <li>
+            <div><u><a href="/other_products_page">Other products</a></u></div>
+        </li>
+    </ol>
+</nav>
+<div id="main_container">
+    <div id="other_products_container">
+        <h2 id="other_products_label">
+            Information about other products
+        </h2>
+        <p>We are so sorry, but there are no other products</p>
+    </div>
+</div>
+{% endblock %}
